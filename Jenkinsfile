@@ -3,7 +3,7 @@ pipeline {
   environment {
     apptainerRecipe = "Apptainer"
     apptainerImage = "multiqc"
-    apptainerVersion = "1.11"
+    apptainerVersion = "1.14"
   }
 
   agent { label 'apptainer' }
