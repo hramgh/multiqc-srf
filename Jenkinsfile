@@ -1,6 +1,7 @@
 pipeline {
   
   environment {
+    apptainerRecipe = "Apptainer"
     apptainerImage = "multiqc"
     apptainerVersion = "1.11"
   }
@@ -10,7 +11,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh "sudo apptainer build ${apptainerImage}-${apptainerVersion}.sif ${apptainerImage}.${apptainerVersion}"
+        sh "sudo apptainer build ${apptainerImage}-${apptainerVersion}.sif ${apptainerRecipe}.${apptainerVersion}"
       }
     }
 
